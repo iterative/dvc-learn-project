@@ -12,16 +12,16 @@ stages:
       size: 3747
     params:
       params.yaml:
-        lr: 0.0007
+        lr: 0.0005
         seed: 473987
         weight_decay: 0
     outs:
     - path: model.pt
-      md5: 02f936e61d9a6dfb748346c9be194754
+      md5: cd8c36b76892b19309a9e69a398e1858
       size: 410191
     - path: predictions.json
-      md5: 0fc2ec8779e3a015e6aadf037216132c
+      md5: b6b315093bf3aca60190b3cde6052ed4
       size: 310000
     - path: results.json
-      md5: 9a3b35e25d85cd0b8ed691ae74a41b29
+      md5: 8ef546df7214760e88f82d48d61cbf9a
       size: 53
