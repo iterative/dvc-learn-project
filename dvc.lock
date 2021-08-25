@@ -4,12 +4,12 @@ stages:
     cmd: python train.py
     deps:
     - path: data/MNIST
-      md5: 563f931b5aa3d66aaee35ca9ea59ff3e.dir
-      size: 66544770
-      nfiles: 8
+      md5: 5a3ad8c393be92866e3f9bacaecffe6a.dir
+      size: 66550918
+      nfiles: 9
     - path: train.py
-      md5: b99c147da0da02668d028c841574ea67
-      size: 3747
+      md5: 7fa9c4b1e3abe004a0cdef24357d5892
+      size: 3746
     params:
       params.yaml:
         lr: 0.0005
