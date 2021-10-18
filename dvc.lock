@@ -1,0 +1,27 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python train.py
+    deps:
+    - path: data/MNIST
+      md5: 563f931b5aa3d66aaee35ca9ea59ff3e.dir
+      size: 66544770
+      nfiles: 8
+    - path: train.py
+      md5: b1df4462e0540d0dc740b83d4f664aff
+      size: 3746
+    params:
+      params.yaml:
+        lr: 0.0005
+        seed: 473987
+        weight_decay: 0
+    outs:
+    - path: model.pt
+      md5: 8186401f085afaae665a298fa3b77954
+      size: 410191
+    - path: predictions.json
+      md5: 3badefcff16b148ac0f1f8ec6ba8c68a
+      size: 310000
+    - path: results.json
+      md5: b9c588bb66858a08dca671efa9dc5cf4
+      size: 54
