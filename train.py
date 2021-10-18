@@ -7,9 +7,6 @@ import torch.nn.functional as F
 import torchvision
 
 
-EPOCHS = 10
-
-
 class ConvNet(torch.nn.Module):
     """Toy convolutional neural net."""
     def __init__(self):
@@ -102,7 +99,7 @@ def main():
     x_test, y_test = transform(mnist_test)
     try:
         # Iterate over training epochs.
-        for i in range(1, EPOCHS+1):
+        for i in range(1, params["num_epochs"]+1):
             # Train in batches.
             train_loader = torch.utils.data.DataLoader(
                     dataset=list(zip(x_train, y_train)),
