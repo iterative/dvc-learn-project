@@ -7,3 +7,4 @@ predictions.json
 .dvcignore
 .vscode/
 /results
+results_dvc_plots/*
