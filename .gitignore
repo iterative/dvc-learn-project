@@ -1,6 +1,6 @@
 .venv/
 .dvc/*
-data/
+data/MNIST/raw
 model.pt
 predictions.json
 /dvclive
