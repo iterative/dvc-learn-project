@@ -1,4 +1,4 @@
 seed: 473987
-lr: 0.0045
-weight_decay: 0
+lr: 0.045
+weight_decay: 29
 num_epochs: 3
