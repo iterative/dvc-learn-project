@@ -17,9 +17,9 @@ stages:
         weight_decay: 29
     outs:
     - path: model.pt
-      md5: cecaaff6010b4f046cfced4a875b6da8
+      md5: 699c75cf7fbbceb8ac6f7c09196a2dee
       size: 410191
     - path: results
-      md5: fca4510dbb4881c18d04caa2398ff271.dir
-      size: 101
+      md5: a6c8c2da73b4a8b33b5b8365dd1e0a2b.dir
+      size: 158
       nfiles: 2
