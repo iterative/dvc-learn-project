@@ -12,14 +12,14 @@ stages:
       size: 3870
     params:
       params.yaml:
-        lr: 0.045
+        lr: 0.45
         seed: 473987
         weight_decay: 29
     outs:
     - path: model.pt
-      md5: d0d406152c05de54940a94ac6447146c
+      md5: cecaaff6010b4f046cfced4a875b6da8
       size: 410191
     - path: results
-      md5: f219f254caa7d5e5743bbe526455b24a.dir
-      size: 403
+      md5: fca4510dbb4881c18d04caa2398ff271.dir
+      size: 101
       nfiles: 2
