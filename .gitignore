@@ -5,4 +5,3 @@ predictions.json
 /dvclive
 .dvcignore
 .vscode/
-/results

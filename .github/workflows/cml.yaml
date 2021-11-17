@@ -8,7 +8,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: Generate metrics report
+      - name: Train model
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -16,11 +16,14 @@ jobs:
           
           dvc get https://github.com/iterative/dataset-registry/ dvc-course/hymenoptera_data
 
-          python train.py
-
+          dvc exp run
+      - name: Generate metrics report
+        env:
+          REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
           dvc metrics show --show-md >> report.md
 
-          dvc plots show --show-vega master > vega.json
+          dvc plots show --show-vega workspace > vega.json
           vl2png vega.json -s 1.5 | cml publish --md >> report.md
 
           cml send-comment report.md
