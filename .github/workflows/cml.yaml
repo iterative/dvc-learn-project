@@ -20,7 +20,7 @@ jobs:
 
           dvc metrics show --show-md >> report.md
 
-          dvc plots show --show-vega main > vega.json
+          dvc plots show --show-vega master > vega.json
           vl2png vega.json -s 1.5 | cml publish --md >> report.md
 
           cml send-comment report.md
