@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>DVC Plot</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.18.2"></script>
+</head>
+<body>
+    
+    <div id = "plot_results_acc_tsv">
+        <script type = "text/javascript">
+            var spec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "data": {
+        "values": [
+    {
+        "acc": "0.8364",
+        "rev": "workspace",
+        "step": "0",
+        "timestamp": "1637160391283"
+    },
+    {
+        "acc": "0.8951",
+        "rev": "workspace",
+        "step": "1",
+        "timestamp": "1637160402842"
+    },
+    {
+        "acc": "0.9181",
+        "rev": "workspace",
+        "step": "2",
+        "timestamp": "1637160414566"
+    }
+]
+    },
+    "title": "",
+    "width": 300,
+    "height": 300,
+    "mark": {
+        "type": "line"
+    },
+    "encoding": {
+        "x": {
+            "field": "step",
+            "type": "quantitative",
+            "title": "step"
+        },
+        "y": {
+            "field": "acc",
+            "type": "quantitative",
+            "title": "acc",
+            "scale": {
+                "zero": false
+            }
+        },
+        "color": {
+            "field": "rev",
+            "type": "nominal"
+        }
+    }
+}
+;
+            vegaEmbed('#plot_results_acc_tsv', spec);
+        </script>
+    </div>
+    
+
+    <div id = "plot_results_loss_tsv">
+        <script type = "text/javascript">
+            var spec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "data": {
+        "values": [
+    {
+        "loss": "0.5520246028900146",
+        "rev": "workspace",
+        "step": "0",
+        "timestamp": "1637160391282"
+    },
+    {
+        "loss": "0.35514938831329346",
+        "rev": "workspace",
+        "step": "1",
+        "timestamp": "1637160402841"
+    },
+    {
+        "loss": "0.2838822305202484",
+        "rev": "workspace",
+        "step": "2",
+        "timestamp": "1637160414565"
+    }
+]
+    },
+    "title": "",
+    "width": 300,
+    "height": 300,
+    "mark": {
+        "type": "line"
+    },
+    "encoding": {
+        "x": {
+            "field": "step",
+            "type": "quantitative",
+            "title": "step"
+        },
+        "y": {
+            "field": "loss",
+            "type": "quantitative",
+            "title": "loss",
+            "scale": {
+                "zero": false
+            }
+        },
+        "color": {
+            "field": "rev",
+            "type": "nominal"
+        }
+    }
+}
+;
+            vegaEmbed('#plot_results_loss_tsv', spec);
+        </script>
+    </div>
+    
+</body>
+</html>
