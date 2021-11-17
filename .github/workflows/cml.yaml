@@ -16,10 +16,10 @@ jobs:
           
           dvc get https://github.com/iterative/dataset-registry/ dvc-course/hymenoptera_data
 
-          python pretrained_model_tuner.py
+          python train.py
 
           dvc metrics show --show-md >> report.md
 
-          dvc plots show 
+          dvc plots show --show-md >> report.md
 
           cml send-comment report.md
